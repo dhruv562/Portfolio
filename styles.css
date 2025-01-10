@@ -308,8 +308,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin: 0 150px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -414,11 +413,13 @@ body {
 @media (max-width: 768px) {
     .education-timeline {
         flex-direction: column;
+        gap: 20px;
     }
 
     .education-card {
         flex-direction: column;
         align-items: flex-start;
+        margin: 0 20px;  /* Reduce the margin for mobile screens */
     }
 
     .education-year {
@@ -427,6 +428,24 @@ body {
 
     .education-details h3 {
         font-size: 1.5em;
+    }
+
+    .education-details p {
+        font-size: 1em;
+    }
+
+    /* Adjust the progress bar size */
+    .progress-container {
+        width: 100%;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 6px; /* Adjust height for mobile screens */
+    }
+
+    .percentage-text {
+        font-size: 1em;
     }
 }
 
@@ -812,15 +831,15 @@ body {
 }
 
 .contact-section {
-    padding: 200px 0;
-    background-color: #1a1a1a; /* Dark background */
-    height: 660px;
+    padding: 120px 0; /* Padding for mobile */
+    background-color: #1a1a1a;
     color: #fff;
     text-align: center;
+    /* Removed fixed height for dynamic content */
 }
 
 .container {
-    width: 80%;
+    width: 90%; /* Reduced container width for better mobile scaling */
     margin: 0 auto;
 }
 
@@ -936,7 +955,8 @@ body {
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
+        padding: 10px;
     }
 
     .contact-form-container {
@@ -950,5 +970,24 @@ body {
 
     .contact-header .section-subtitle {
         font-size: 1.1em;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+/* Desktop Media Query for Larger Screens */
+@media (min-width: 769px) {
+    .contact-section {
+        padding: 215px 0; /* Increased padding for desktop */
+    }
+
+    .contact-header .section-title {
+        font-size: 3.5em;
+    }
+
+    .contact-header .section-subtitle {
+        font-size: 1.4em;
     }
 }
