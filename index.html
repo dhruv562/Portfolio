@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio | Dhruv Patidar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Portfolio</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="intro" id="intro">
+        <div class="container">
+            <div class="text-section">
+                <h2>Hello, It's me </h2>
+                <h1>DHRUV PATIDAR</h1>
+                <h2>And I'm a Web Developer</h2>
+            </div>
+            <div class="image-section">
+                <img src="avtar.png" alt="Dhruv Patidar AI Avatar" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="avtar.png" alt="Dhruv Patidar" class="profile-image">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi, I'm Dhruv Patidar, a passionate Full Stack Developer with a love for crafting exceptional digital experiences. I specialize in building dynamic, user-friendly websites and applications that deliver great performance and design. My goal is to bring ideas to life through code, making sure to deliver seamless, engaging, and scalable web solutions.</p>
+                <p>I believe in continuous learning and improving my skills to stay up-to-date with the latest technologies. I enjoy solving complex problems and working with teams to create high-quality solutions. Outside of development, I am passionate about staying active, traveling, and exploring new places!</p>
+                <p>Feel free to reach out to me for collaboration opportunities, or just to chat about web development!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="education-section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-timeline">
+            <!-- B.Tech -->
+            <div class="education-card">
+                <div class="education-year">2021-2025</div>
+                <div class="education-details">
+                    <h3>B.Tech in Computer Science</h3>
+                    <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya Indore</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <span style="width: 70%;"></span>
+                        </div>
+                        <div class="percentage-text">7.02</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 12th Grade -->
+            <div class="education-card">
+                <div class="education-year">2019-2021</div>
+                <div class="education-details">
+                    <h3>12th Grade (Science)</h3>
+                    <p>Shree Gurukul School Kasrawad</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <span style="width: 73.8%;"></span>
+                        </div>
+                        <div class="percentage-text">73.8%</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 10th Grade -->
+            <div class="education-card">
+                <div class="education-year">2017-2019</div>
+                <div class="education-details">
+                    <h3>10th Grade</h3>
+                    <p>Shree Gurukul School Kasrawad</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <span style="width: 80.4%;"></span>
+                        </div>
+                        <div class="percentage-text">80.4%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+    <section class="skills" id="skills">
+        <h2 class="my-skills-heading">My Skills</h2>
+        <div class="container">
+            <div class="skills-left">
+                <h2 class="skills-heading">Technical Skills</h2>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Logo" class="skill-logo">
+                        HTML
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="90"></div>
+                        <span class="percentage">90%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Logo" class="skill-logo">
+                        CSS
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="85"></div>
+                        <span class="percentage">85%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Logo" class="skill-logo">
+                        JavaScript
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="80"></div>
+                        <span class="percentage">75%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <img src="https://img.icons8.com/ios/50/000000/mysql-logo.png" alt="MySQL Logo" class="skill-logo">
+                        MySQL
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="75"></div>
+                        <span class="percentage">80%</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <img src="https://img.icons8.com/ios/50/000000/php-logo.png" alt="PHP Logo" class="skill-logo">
+                        PHP
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-skill="70"></div>
+                        <span class="percentage">70%</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+    
+            <div class="skills-right">
+                <h2 class="skills-heading">Professional Skills</h2>
+                <div class="skills-row">
+                    <div class="skill-item">
+                        <div class="skill-name">Project Management</div>
+                        <div class="circular-progress">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none" />
+                                <circle class="circular-progress-bar" cx="60" cy="60" r="50" stroke="#6a11cb" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" />
+                            </svg>
+                            <span class="percentage">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Team Collaboration</div>
+                        <div class="circular-progress">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none" />
+                                <circle class="circular-progress-bar" cx="60" cy="60" r="50" stroke="#6a11cb" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" />
+                            </svg>
+                            <span class="percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-row">
+                    <div class="skill-item">
+                        <div class="skill-name">Client Communication</div>
+                        <div class="circular-progress">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none" />
+                                <circle class="circular-progress-bar" cx="60" cy="60" r="50" stroke="#6a11cb" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" />
+                            </svg>
+                            <span class="percentage">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Problem Solving</div>
+                        <div class="circular-progress">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="50" stroke="#ddd" stroke-width="10" fill="none" />
+                                <circle class="circular-progress-bar" cx="60" cy="60" r="50" stroke="#6a11cb" stroke-width="10" fill="none" stroke-dasharray="314" stroke-dashoffset="314" />
+                            </svg>
+                            <span class="percentage">90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section class="projects" id="projects">
+        <h2 class="my-projects-heading">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="placify.jpg" alt="Project 1" class="project-image">
+                <div class="project-info">
+                    <h3>Placify: Placement Prepration PLatform</h3>
+                    <p>Placify is an online platform designed to help students prepare for placement drives and interviews. It offers a comprehensive set of resources including mock tests, interview preparation materials, and industry insights. The platform aims to enhance students' skills, boosting their confidence and readiness for recruitment processes, making placement preparation streamlined and effective.</p>
+                </div>
+            </div>
+    
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <img src="bus.jpg" alt="Project 2" class="project-image">
+                <div class="project-info">
+                    <h3>Bus Management System</h3>
+                    <p>The Bus Management System is a software solution designed to streamline the operation of bus services. It includes features for route planning, scheduling, vehicle tracking, and passenger management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <!-- Header for the Section -->
+            <div class="contact-header">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Let's connect! You can reach out to me via any of the options.</p>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <a href="dhruv56patidar@gmail.com" class="contact-icon" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dhruv-patidar-6007a9274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="contact-icon" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="tel:+919340872904" class="contact-icon" target="_blank">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Phone</span>
+                </a>
+            </div>
+    
+            <!-- Contact Form Section -->
+            
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <script>
+        // Optional: Smooth scrolling for older browsers (if needed)
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+                const targetSection = document.getElementById(targetId); // Get the section element
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60, // Offset for the fixed navbar (adjust if needed)
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            });
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        window.addEventListener("load", () => {
+    // Trigger the progress bar animation by adding a class on page load
+    document.querySelectorAll('.progress').forEach(progress => {
+        const skillLevel = progress.getAttribute('data-skill');
+        progress.style.width = skillLevel + '%';
+    });
+
+    // Trigger the circular progress animation
+    document.querySelectorAll('.circular-progress-bar').forEach(bar => {
+        const percentage = bar.getAttribute('stroke-dasharray');
+        const skillPercentage = bar.getAttribute('data-skill');
+        bar.style.animation = 'circular-progress-animation 2s forwards';
+        bar.style.strokeDashoffset = `calc(314 - (314 * ${skillPercentage}) / 100)`;
+    });
+});
+
+    </script>
+
+</body>
+</html>

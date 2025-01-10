@@ -1,0 +1,954 @@
+/* Add smooth scrolling to the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Stylish gradient background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark navbar */
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-links li {
+    margin: 0 20px;
+    position: relative; /* For positioning the line under links */
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for the Links */
+nav .nav-links a:hover {
+    color: #ff5722; /* Hover color */
+}
+
+/* Add line under the link on hover */
+nav .nav-links a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722; /* The same color as the hover effect */
+    transition: width 0.3s ease;
+}
+
+nav .nav-links a:hover:after {
+    width: 100%; /* Line grows to full width of the link */
+}
+
+/* Hamburger Menu */
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-section {
+    max-width: 500px;
+    text-align: left;
+}
+
+.text-section h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Glowing effect around text */
+}
+
+.text-section p {
+    font-size: 24px;
+    color: #ff5722; /* Bright accent color */
+}
+
+/* Profile Image Section */
+.image-section {
+    max-width: 500px;
+    position: relative;
+    text-align: center; /* Center the image */
+}
+
+.profile-image {
+    width: 350px; /* Adjust the size to fit the design */
+    height: 350px; /* Make it a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow around the circular image */
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for hover effect */
+    filter: brightness(1.2); /* Make the image always bright */
+}
+
+/* Hover Effect on Image */
+.profile-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    filter: brightness(1.3); /* Slightly increase brightness on hover */
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding-bottom: 110px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #6a11cb;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-text p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Navbar Links for Mobile */
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark background on mobile */
+        padding: 20px 0;
+        transition: all 0.3s ease;
+    }
+
+    nav .nav-links.active {
+        display: block;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    nav .nav-links a {
+        font-size: 20px;
+    }
+
+    /* Hamburger Menu Background */
+    nav .hamburger .bar {
+        background-color: #fff;
+    }
+
+    /* Intro Section on Mobile */
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px; /* Adds space for the fixed navbar */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Adjust the profile image size */
+    .profile-image {
+        width: 150px; /* Smaller image for mobile */
+        height: 150px;
+    }
+
+    /* About Section on Mobile */
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Education Section */
+.education-section {
+    padding: 50px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Timeline */
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Education Card */
+.education-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: scale(1.05);
+}
+
+/* Education Year */
+.education-year {
+    font-size: 1.3em;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Education Details */
+.education-details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.education-details h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.education-details p {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Progress Container */
+.progress-container {
+    text-align: center;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #4CAF50;
+    text-align: center;
+    color: white;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+/* Percentage Text below the progress bar */
+.percentage-text {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hover Effects and Animations */
+.education-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.education-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.education-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.education-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-timeline {
+        flex-direction: column;
+    }
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-year {
+        font-size: 1.2em;
+    }
+
+    .education-details h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+   
+  
+  
+  
+  
+  
+  
+
+
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* My Skills Heading */
+.my-skills-heading {
+    font-size: 36px;
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* Space below the heading */
+    color: #6a11cb;
+}
+
+/* Main container for skills */
+.skills .container {
+    display: flex;
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-left, .skills-right {
+    width: 45%; /* Adjusted the width of each side */
+}
+
+/* Section Title */
+.skills-heading {
+    font-size: 32px;
+    text-align: center; /* Center the title */
+    margin-bottom: 50px;
+    color: #6a11cb;
+}
+
+/* Technical Skills Progress Bar */
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left */
+    margin-bottom: 20px; /* Space between skill items */
+}
+
+.skill-name {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between the logo and skill name */
+}
+
+.skill-logo {
+    width: 30px; /* Logo size */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; /* Ensure that the percentage is positioned within the progress bar */
+}
+
+.progress {
+    height: 100%;
+    background-color: #6a11cb;
+    width: 0%; /* Start with 0% width */
+    animation: progress-bar-animation 2s forwards; /* Add the animation */
+}
+
+/* Keyframes for animating progress bar width */
+@keyframes progress-bar-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progress-width); /* Set width dynamically using CSS variable */
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: -25px; /* Adjust the vertical positioning */
+    right: 0; /* Align percentage to the right side */
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Set progress bar width dynamically using custom properties */
+.skill-item:nth-of-type(1) .progress {
+    --progress-width: 90%; /* HTML progress */
+}
+
+.skill-item:nth-of-type(2) .progress {
+    --progress-width: 80%; /* CSS progress */
+}
+
+.skill-item:nth-of-type(3) .progress {
+    --progress-width: 75%; /* JavaScript progress */
+}
+
+.skill-item:nth-of-type(4) .progress {
+    --progress-width: 80%; /* MySQL progress */
+}
+
+.skill-item:nth-of-type(5) .progress {
+    --progress-width: 70%; /* PHP progress */
+}
+
+
+/* Circular Progress Bar */
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg); /* Rotate to start from the top */
+}
+
+.circular-progress circle {
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circular-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a11cb;
+}
+
+/* Professional Skills Row Layout */
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.skills-row .skill-item {
+    width: 48%; /* Two items per row */
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills .container {
+        flex-direction: column; /* Stack the sections vertically on mobile */
+        text-align: center;
+    }
+
+    .skills-left, .skills-right {
+        width: 100%; /* Full width for each section on mobile */
+        margin-bottom: 30px; /* Space between sections */
+    }
+
+    .skills-row {
+        flex-direction: column; /* Stack the skills vertically on mobile */
+    }
+
+    .skills-row .skill-item {
+        width: 100%; /* Full width for each item in the row */
+        margin-bottom: 20px;
+    }
+
+    .skill-logo {
+        width: 25px; /* Smaller logos on mobile */
+        height: 25px;
+    }
+
+    .progress-bar {
+        width: 80%; /* Slightly smaller progress bars on mobile */
+    }
+}
+
+
+
+
+
+
+
+/* Keyframe Animation for Progress Bars */
+@keyframes progress-bar-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progress-width);
+    }
+}
+
+/* Keyframe Animation for Circular Progress Bars */
+@keyframes circular-progress-animation {
+    0% {
+        stroke-dashoffset: 314;
+    }
+    100% {
+        stroke-dashoffset: calc(314 - (314 * var(--percentage)) / 100);
+    }
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #6a11cb;
+    width: 0%; /* Start with 0% width */
+    animation: progress-bar-animation 2s forwards;
+}
+
+/* Circular Progress Bar */
+.circular-progress {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg); /* Rotate to start from the top */
+}
+
+.circular-progress .circular-progress-bar {
+    transition: stroke-dashoffset 1s ease;
+    animation: circular-progress-animation 2s forwards;
+}
+
+.circular-progress .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a11cb;
+}
+
+/* Triggering animation on page load */
+.progress {
+    --progress-width: 90%; /* Adjust for HTML */
+}
+
+.circular-progress .circular-progress-bar {
+    --percentage: 80; /* Adjust for Project Management */
+}
+
+.circular-progress .circular-progress-bar:nth-of-type(2) {
+    --percentage: 85; /* Adjust for Team Collaboration */
+}
+
+.circular-progress .circular-progress-bar:nth-of-type(3) {
+    --percentage: 75; /* Adjust for Client Communication */
+}
+
+.circular-progress .circular-progress-bar:nth-of-type(4) {
+    --percentage: 90; /* Adjust for Problem Solving */
+}
+
+
+
+
+
+
+
+
+
+/* Project Section */
+.projects {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.my-projects-heading {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 90px;
+    color: #6a11cb;
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow cards to wrap in smaller screens */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Project Card */
+.project-card {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure the image covers the space */
+}
+
+/* Project Info */
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Make cards full-width on mobile */
+    }
+
+    .projects-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.contact-section {
+    padding: 200px 0;
+    background-color: #1a1a1a; /* Dark background */
+    height: 660px;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.contact-header {
+    margin-bottom: 50px;
+}
+
+.contact-header .section-title {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-header .section-subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Contact Icons */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.contact-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icon i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-icon span {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Hover effect for icons */
+.contact-icon:hover {
+    transform: translateY(-5px);
+    color: #2575fc;
+}
+
+/* Contact Form Section */
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    margin-top: 8px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* Submit Button */
+.contact-form button {
+    padding: 15px 25px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #6a11cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contact-header .section-title {
+        font-size: 2.5em;
+    }
+
+    .contact-header .section-subtitle {
+        font-size: 1.1em;
+    }
+}
